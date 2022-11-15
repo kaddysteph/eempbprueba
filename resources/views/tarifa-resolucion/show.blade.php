@@ -21,10 +21,6 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>ID:</strong>
-                            {{ $tarifaResolucion->TarifaResolucionId }}
-                        </div>
-                        <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $tarifaResolucion->TarifaResolucionDescripcion }}
                         </div>

@@ -85,6 +85,14 @@ class TarifaResolucionController extends Controller
      */
     public function update(Request $request, TarifaResolucion $tarifaResolucion)
     {
+
+        $request->validate([
+            'TarifaResolucionDescripcion' => 'required',
+            'TarifaResolucionFechaInicial' => 'required',
+            'TarifaResolucionFechaFinal' => 'required',
+            'TarifaResolucionEstado' => 'required',
+            'TarifaResolucionObservacion' => 'required',
+        ]);
         
         $tarifaResolucion->update($request->all());
 
@@ -101,7 +109,7 @@ class TarifaResolucionController extends Controller
     {
         $tarifaResolucion = TarifaResolucion::find($TarifaResolucionId)->delete();
 
-        return redirect('tarifa-resolucions.index')
+        return redirect('tarifa-resolucion.index')
             ->with('success', 'TarifaResolucion deleted successfully');
     }
 }
