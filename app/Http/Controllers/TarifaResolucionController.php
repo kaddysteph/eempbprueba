@@ -86,7 +86,7 @@ class TarifaResolucionController extends Controller
     public function update(Request $request, TarifaResolucion $tarifaResolucion)
     {
         
-        $tarifaResolucion->updateOrFail($request->all());
+        $tarifaResolucion->update($request->all());
 
         return redirect('tarifaresolucion')
             ->with('success', 'TarifaResolucion updated successfully');
