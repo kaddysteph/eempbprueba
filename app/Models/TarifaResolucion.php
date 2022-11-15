@@ -23,16 +23,18 @@ class TarifaResolucion extends Model
 
     protected $table = 'TarifaResolucion';
     
-    
+    protected $primaryKey = 'TarifaResolucionId';
 
     protected $perPage = 20;
+
+    
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['TarifaResolucionId','TarifaResolucionDescripcion','TarifaResolucionFechaInicial','TarifaResolucionFechaFinal','TarifaResolucionEstado','TarifaResolucionObservacion'];
+    protected $fillable = ['TarifaResolucionDescripcion','TarifaResolucionFechaInicial','TarifaResolucionFechaFinal','TarifaResolucionEstado','TarifaResolucionObservacion'];
 
 
     /**

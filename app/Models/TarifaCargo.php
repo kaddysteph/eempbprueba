@@ -24,7 +24,8 @@ use Illuminate\Database\Eloquent\Model;
 class TarifaCargo extends Model
 {
     protected $table = 'TarifaCargos'; 
-    
+    protected $primaryKey = 'TarifaResolucion_TarifaResolucionId';
+   
     static $rules = [
 		'TarifaResolucion_TarifaResolucionId' => 'required',
 		'TarifaBloque_TarifaBloqueId' => 'required',

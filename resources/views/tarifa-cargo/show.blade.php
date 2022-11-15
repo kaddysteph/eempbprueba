@@ -14,7 +14,7 @@
                             <span class="card-title">Show Tarifa Cargo</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tarifa-cargos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('tarifacargos.index') }}"> Back</a>
                         </div>
                     </div>
 

@@ -44,7 +44,6 @@ class TarifaResolucionController extends Controller
     public function store(Request $request)
     {
         
-
         $tarifaResolucion = TarifaResolucion::create($request->all());
 
         return redirect('tarifaresolucion')
@@ -86,9 +85,8 @@ class TarifaResolucionController extends Controller
      */
     public function update(Request $request, TarifaResolucion $tarifaResolucion)
     {
-        request()->validate(TarifaResolucion::$rules);
-
-        $tarifaResolucion->update($request->all());
+        
+        $tarifaResolucion->updateOrFail($request->all());
 
         return redirect('tarifaresolucion')
             ->with('success', 'TarifaResolucion updated successfully');

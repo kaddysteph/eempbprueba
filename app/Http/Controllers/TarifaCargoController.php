@@ -47,7 +47,7 @@ class TarifaCargoController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(TarifaCargo::$rules);
+       
 
         $tarifaCargo = TarifaCargo::create($request->all());
 
@@ -77,8 +77,10 @@ class TarifaCargoController extends Controller
     public function edit($id)
     {
         $tarifaCargo = TarifaCargo::find($id);
+        $resolucion = TarifaResolucion::pluck('TarifaResolucionDescripcion', 'TarifaResolucionId');
+        $bloque = TarifaBloque::pluck('TarifaBloqueNombre', 'TarifaBloqueId');
 
-        return view('tarifa-cargo.edit', compact('tarifaCargo'));
+        return view('tarifa-cargo.edit', compact('tarifaCargo', 'resolucion', 'bloque'));
     }
 
     /**
@@ -94,7 +96,7 @@ class TarifaCargoController extends Controller
 
         $tarifaCargo->update($request->all());
 
-        return redirect()->route('tarifa-cargo.index')
+        return redirect('tarifacargos')
             ->with('success', 'TarifaCargo updated successfully');
     }
 
@@ -107,7 +109,7 @@ class TarifaCargoController extends Controller
     {
         $tarifaCargo = TarifaCargo::find($id)->delete();
 
-        return redirect()->route('tarifa-cargo.index')
+        return redirect('tarifacargos')
             ->with('success', 'TarifaCargo deleted successfully');
     }
 }

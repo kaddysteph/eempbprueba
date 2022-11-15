@@ -86,7 +86,7 @@ class TarifaBloqueController extends Controller
      */
     public function update(Request $request, TarifaBloque $tarifaBloque)
     {
-        request()->validate(TarifaBloque::$rules);
+        
 
         $tarifaBloque->update($request->all());
 
