@@ -30,9 +30,7 @@ class TarifaBloque extends Model
 
     protected $perPage = 20;
 
-    static $rules = [
-		'TarifaBloqueId' => 'required',
-    ];
+    
 
     /**
      * Attributes that should be mass-assignable.

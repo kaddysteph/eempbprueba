@@ -26,10 +26,7 @@ class TarifaCargo extends Model
     protected $table = 'TarifaCargos'; 
     protected $primaryKey = 'TarifaResolucion_TarifaResolucionId';
    
-    static $rules = [
-		'TarifaResolucion_TarifaResolucionId' => 'required',
-		'TarifaBloque_TarifaBloqueId' => 'required',
-    ];
+   
 
     protected $perPage = 20;
 

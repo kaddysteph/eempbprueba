@@ -53,7 +53,7 @@
                                         <tr>
                                 
                                             
-											<td>{{ $tarifaCargo->TarifaResolucion_TarifaResolucionId }}</td>
+											<td>{{ $tarifaCargo->$TarifaResolucion_TarifaResolucionId }}</td>
 											<td>{{ $tarifaCargo->TarifaBloque_TarifaBloqueId }}</td>
 											<td>{{ $tarifaCargo->CargoxConsumidor }}</td>
 											<td>{{ $tarifaCargo->CargoxEnergia }}</td>

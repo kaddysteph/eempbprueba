@@ -90,11 +90,12 @@ class TarifaCargoController extends Controller
      * @param  TarifaCargo $tarifaCargo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TarifaCargo $tarifaCargo)
+    public function update(Request $request, $id)
     {
-        request()->validate(TarifaCargo::$rules);
-
-        $tarifaCargo->update($request->all());
+        
+        $tarifaCargo = TarifaCargo::find($id);
+        $input = $request->all();
+        $tarifaCargo->update($input);
 
         return redirect('tarifacargos')
             ->with('success', 'TarifaCargo updated successfully');

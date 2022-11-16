@@ -84,11 +84,11 @@ class TarifaBloqueController extends Controller
      * @param  TarifaBloque $tarifaBloque
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TarifaBloque $tarifaBloque)
+    public function update(Request $request, $TarifaBloqueId)
     {
-        
-
-        $tarifaBloque->update($request->all());
+        $tarifaBloque = TarifaBloque::find($TarifaBloqueId);
+        $input = $request->all();
+        $tarifaBloque->update($input);
 
         return redirect('tarifabloque')
             ->with('success', 'TarifaBloque updated successfully');

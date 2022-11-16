@@ -34,7 +34,7 @@ class TarifaResolucion extends Model
      *
      * @var array
      */
-    protected $fillable = ['TarifaResolucionDescripcion','TarifaResolucionFechaInicial','TarifaResolucionFechaFinal','TarifaResolucionEstado','TarifaResolucionObservacion'];
+    protected $fillable = ['TarifaResolucionId','TarifaResolucionDescripcion','TarifaResolucionFechaInicial','TarifaResolucionFechaFinal','TarifaResolucionEstado','TarifaResolucionObservacion'];
 
 
     /**

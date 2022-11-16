@@ -17,8 +17,9 @@
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('tarifaresolucion.update', $tarifaResolucion->TarifaResolucionId) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
-                            @csrf
+                        @csrf    
+                        {{ method_field('PATCH') }}
+                            
 
                             @include('tarifa-resolucion.form')
 
