@@ -21,35 +21,35 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Tarifaresolucion Tarifaresolucionid:</strong>
+                            <strong>Resolucion:</strong>
                             {{ $tarifaCargo->TarifaResolucion_TarifaResolucionId }}
                         </div>
                         <div class="form-group">
-                            <strong>Tarifabloque Tarifabloqueid:</strong>
+                            <strong>Bloque:</strong>
                             {{ $tarifaCargo->TarifaBloque_TarifaBloqueId }}
                         </div>
                         <div class="form-group">
-                            <strong>Cargoxconsumidor:</strong>
+                            <strong>Cargo por consumidor:</strong>
                             {{ $tarifaCargo->CargoxConsumidor }}
                         </div>
                         <div class="form-group">
-                            <strong>Cargoxenergia:</strong>
+                            <strong>Cargo por energia:</strong>
                             {{ $tarifaCargo->CargoxEnergia }}
                         </div>
                         <div class="form-group">
-                            <strong>Cargounitarioxpotenciamaxima:</strong>
+                            <strong>Cargo unitario por potencia maxima:</strong>
                             {{ $tarifaCargo->CargoUnitarioxPotenciaMaxima }}
                         </div>
                         <div class="form-group">
-                            <strong>Cargounitarioxpotenciacontratada:</strong>
+                            <strong>Cargo unitario por potencia contratada:</strong>
                             {{ $tarifaCargo->CargoUnitarioxPotenciaContratada }}
                         </div>
                         <div class="form-group">
-                            <strong>Cargounitarioxenergiaenpunta:</strong>
+                            <strong>Cargo unitario por energia en punta:</strong>
                             {{ $tarifaCargo->CargoUnitarioxEnergiaenPunta }}
                         </div>
                         <div class="form-group">
-                            <strong>Cargounitarioxenergiaintermedia:</strong>
+                            <strong>Cargo unitario por energia intermedia:</strong>
                             {{ $tarifaCargo->CargoUnitarioxEnergiaIntermedia }}
                         </div>
 
