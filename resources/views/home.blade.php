@@ -13,7 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <div class="container">
+                                Para continuar debe realizar la actualización de sus datos.
+        
+                    <div class="float-right">
+                        <a href="{{ ('actualizacion') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                             {{ __('Actualizar datos') }}
+                        </a>
+                    </div>
+            </div>
                     
                 </div>
             </div>

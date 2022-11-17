@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TarifaResolucionController;
 use App\Http\Controllers\TarifaCargoController;
 use App\Http\Controllers\TarifaBloqueController;
+use App\Http\Controllers\ActualizacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::resource('tarifaresolucion', TarifaResolucionController::class);
 Route::resource('tarifabloque', TarifaBloqueController::class);
 Route::resource('tarifacargos', TarifaCargoController::class);
+Route::resource('actualizacion', ActualizacionController::class);
 
 Auth::routes();
 
