@@ -29,6 +29,8 @@ class ActualizacionController extends Controller
     {
         $actualizacion = new Actualizacion();
         return view('actualizacion.ingreso', compact('actualizacion'));
+
+
     }
 
     /**
