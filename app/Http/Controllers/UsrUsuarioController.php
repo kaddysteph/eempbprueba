@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\UsrUsuario;
 use App\Models\UsrUsuarioTelefono;
 use App\Models\UsrUsuarioDocumentoId;
@@ -21,8 +22,9 @@ class UsrUsuarioController extends Controller
     public function index()
     {
         $usrUsuario = new UsrUsuario();
+        $usrUsuarioTelefono = new UsrUsuarioTelefono();
         $documento = UsrUsuarioDocumentoId::pluck('UsrDoctoIdentificacion', 'UsrDoctoIdentificacionId');
-        return view('usr-usuario.create', compact('usrUsuario', 'documento'));
+        return view('usr-usuario.create', compact('usrUsuario', 'documento', 'usrUsuarioTelefono'));
     }
 
     /**
@@ -33,9 +35,8 @@ class UsrUsuarioController extends Controller
     public function create()
     {
         $usrUsuario = new UsrUsuario();
+        $usrUsuarioTelefono = new UsrUsuarioTelefono();
         $documento = UsrUsuarioDocumentoId::pluck('UsrDoctoIdentificacion', 'UsrDoctoIdentificacionId');
-        
-        
         return view('usr-usuario.create', compact('usrUsuario','documento'));
     }
 
@@ -48,9 +49,24 @@ class UsrUsuarioController extends Controller
     public function store(Request $request)
     {
 
-        $usrUsuario = UsrUsuario::create($request->all());
+        $usuario = new UsrUsuario();
+        $usuario->UsrUsuarioNombres = $request->UsrUsuarioNombres;
+        $usuario->UsrUsuarioApellidos = $request->UsrUsuarioApellidos;
+        $usuario->UsrUsuarioDireccion = $request->UsrUsuarioDireccion;
+        $usuario->UsrUsuarioDocumentoId_UsrDoctoIdentificacionId = $request->UsrUsuarioDocumentoId_UsrDoctoIdentificacionId;
+        $usuario->UsrUsuarioNumeroIdentificacion = $request->UsrUsuarioNumeroIdentificacion;
+        $usuario->UsrUsuarioNIT = $request->UsrUsuarioNIT;
+        $usuario->save();
+        $telefono = new UsrUsuarioTelefono();
+        $telefono->UsrUsuarioTelefono = $request->UsrUsuarioTelefono;
+        $telefono->UsrUsuario_UsrUsuarioIdeem = $usuario->UsrUsuarioIdeem;
 
-        return redirect()->route('usr-usuarios.index')
+        $usuario->users_id = Auth::user()->id;
+        $telefono->save();
+
+
+
+        return view('actualizacion.ingreso')
             ->with('success', 'UsrUsuario created successfully.');
     }
 

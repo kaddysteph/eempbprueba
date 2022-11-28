@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Documento de Identificacion') }}
-            {{ Form::select('UsrUsuarioDocumentoId_UsrDoctoIdentificacionId', $documento, $usrUsuario->UsrUsuarioDocumentoId_UsrDoctoIdentificacionId, ['class' => 'form-control' . ($errors->has('UsrUsuarioDocumentoId_UsrDoctoIdentificacionId') ? ' is-invalid' : '')]) }}
+            {{ Form::select('UsrUsuarioDocumentoId_UsrDoctoIdentificacionId', $documento, $usrUsuario->UsrUsuarioDocumentoId_UsrDoctoIdentificacionId, ['class' => 'form-control' . ($errors->has('UsrUsuarioDocumentoId_UsrDoctoIdentificacionId') ? ' is-invalid' : ''), 'placeholder' => 'Elija una opcion']) }}
             {!! $errors->first('UsrUsuarioDocumentoId_UsrDoctoIdentificacionId', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -30,6 +30,11 @@
             {{ Form::label('NIT') }}
             {{ Form::text('UsrUsuarioNIT', $usrUsuario->UsrUsuarioNIT, ['class' => 'form-control' . ($errors->has('UsrUsuarioNIT') ? ' is-invalid' : '')]) }}
             {!! $errors->first('UsrUsuarioNIT', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Telefono') }}
+            {{ Form::text('UsrUsuarioTelefono', $usrUsuarioTelefono->UsrUsuarioTelefono, ['class' => 'form-control' . ($errors->has('UsrUsuarioTelefono') ? ' is-invalid' : '')]) }}
+            {!! $errors->first('UsrUsuarioTelefono', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>
