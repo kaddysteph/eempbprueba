@@ -10,7 +10,7 @@
 
 <style>
     body{
-        padding-top:10.2rem;
+        padding-top:9.2rem;
 		padding-bottom:4.2rem;
 		background:rgba(0, 0, 0, 0);
         }
@@ -91,8 +91,9 @@
 			<div id="first">
 				<div class="myform form ">
 					 <div class="logo mb-3">
+                        <a href="#"><img src="{{asset('images/eempb.jpg')}}"></a>
 						 <div class="col-md-12 text-center">
-							<h1>Inicio de Sesion</h1>
+							<h1>Inicio de Sesión</h1>
 						 </div>
 					</div>
                    <form method="POST" action="{{ route('login') }}" name="login">
