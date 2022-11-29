@@ -34,7 +34,7 @@ class UsrUsuarioTelefono extends Model
      *
      * @var array
      */
-    protected $fillable = ['UsrUsuarioTelefonoId','UsrUsuarioTelefono','create_at','update_at','UsrUsuario_UsrUsuarioIdeem'];
+    protected $fillable = ['UsrUsuarioTelefonoId','UsrUsuarioTelefono','UsrUsuario_UsrUsuarioIdeem'];
 
 
     /**

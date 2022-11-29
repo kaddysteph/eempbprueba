@@ -56,12 +56,11 @@ class UsrUsuarioController extends Controller
         $usuario->UsrUsuarioDocumentoId_UsrDoctoIdentificacionId = $request->UsrUsuarioDocumentoId_UsrDoctoIdentificacionId;
         $usuario->UsrUsuarioNumeroIdentificacion = $request->UsrUsuarioNumeroIdentificacion;
         $usuario->UsrUsuarioNIT = $request->UsrUsuarioNIT;
+        $usuario->users_id = Auth::user()->id;
         $usuario->save();
         $telefono = new UsrUsuarioTelefono();
         $telefono->UsrUsuarioTelefono = $request->UsrUsuarioTelefono;
-        $telefono->UsrUsuario_UsrUsuarioIdeem = $usuario->UsrUsuarioIdeem;
-
-        $usuario->users_id = Auth::user()->id;
+        $telefono->UsrUsuario_UsrUsuarioIdeem = $usuario->id;
         $telefono->save();
 
 
