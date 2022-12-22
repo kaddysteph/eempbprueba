@@ -6,6 +6,8 @@ use App\Http\Controllers\TarifaResolucionController;
 use App\Http\Controllers\TarifaCargoController;
 use App\Http\Controllers\TarifaBloqueController;
 use App\Http\Controllers\UsrUsuarioController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 use App\Models\User;
 
 /*
@@ -54,6 +56,8 @@ Route::resource('tarifaresolucion', TarifaResolucionController::class);
 Route::resource('tarifabloque', TarifaBloqueController::class);
 Route::resource('tarifacargos', TarifaCargoController::class);
 Route::resource('actualizacion', UsrUsuarioController::class);
+Route::resource('users', UserController::class);
+Route::resource('roles', RoleController::class);
 
 
 Auth::routes();
